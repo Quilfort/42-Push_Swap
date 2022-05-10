@@ -12,7 +12,8 @@ SRC =	./src/push_swap.c \
 		./src/op_rotate.c \
 		./src/op_reverse.c \
 		./src/algo_max5.c \
-		./src/is_sorted.c
+		./src/is_sorted.c \
+		./src/push_swap_index.c
 
 all : $(NAME)
 

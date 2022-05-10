@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:28:03 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/10 14:41:53 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/10 17:02:21 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 typedef struct s_vars {
 	int		check_print;
+	int		arguments;
 }				t_vars;
 
 typedef struct s_node
@@ -51,6 +52,9 @@ void	reverse_both(t_node **stack_a, t_node **stack_b, t_vars *vars);
 //
 void	list_print(t_node *stack_a);
 int		list_size(t_node *list);
+
+//
+void	bubble_sort(t_node **stack_a, t_vars *vars);
 
 //
 int		is_sorted(t_node **stack_a);

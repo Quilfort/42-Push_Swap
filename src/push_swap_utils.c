@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/14 12:40:22 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/07 12:17:28 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/10 15:50:40 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	list_print(t_node *stack)
 {
 	while (stack)
 	{
-		printf("%d\n", stack->content);
+		printf("%d ", stack->content);
 		stack = stack->next;
 	}
 }
