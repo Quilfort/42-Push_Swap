@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:28:03 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/07 16:04:04 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/10 14:41:53 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <libft.h>
+# include <limits.h>
 
 typedef struct s_vars {
 	int		check_print;
@@ -46,18 +47,22 @@ void	rotate_both(t_node **stack_a, t_node **stack_b, t_vars *vars);
 void	reverse_a(t_node **stack_a, t_vars *vars);
 void	reverse_b(t_node **stack_b, t_vars *vars);
 void	reverse_both(t_node **stack_a, t_node **stack_b, t_vars *vars);
+
 //
-
-
 void	list_print(t_node *stack_a);
 int		list_size(t_node *list);
 
+//
+int		is_sorted(t_node **stack_a);
+int		check_nodes(t_node *first, t_node *second);
+int		smallest_num(t_node **stack_a);
 
 // algo test
 void	arg_2(t_node **stack_a, t_vars *vars);
 void	arg_3(t_node **stack_a, t_vars *vars);
+void	arg_4(t_node **stack_a, t_node **stack_b, t_vars *vars);
+void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars);
+void	arg_5_2(t_node **stack_a, t_node **stack_b, t_vars *vars);
 
-
-
-
+int		smallest_num(t_node **stack_a);
 #endif
