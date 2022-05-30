@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 12:08:58 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 15:16:01 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 17:23:36 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ static t_node	*create_head(char *argv[])
 
 	head = (t_node *)malloc(sizeof(t_node));
 	if (head == NULL)
-		return (head);
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit(1);
+	}
 	head->content = ft_atoi(argv[1]);
 	head->next = NULL;
 	return (head);

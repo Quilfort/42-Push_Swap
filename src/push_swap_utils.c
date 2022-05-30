@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/14 12:40:22 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 14:55:41 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 17:16:20 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	only_numbers(char *argv[], int argc)
 	while (i < argc)
 	{
 		j = 0;
-		if (argv[i][0] == '-')
+		if (argv[i][0] == '-' && argv[i][1] != '\0')
 			j++;
 		while (argv[i][j] != '\0')
 		{

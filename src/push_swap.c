@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:26:51 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 15:04:40 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 17:21:10 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char *argv[])
 	t_node	*stack_b;
 	t_vars	vars;
 
-	if (argc < 3)
+	if (argc == 1)
 		return (0);
 	duplicate(argv, argc);
 	only_numbers(argv, argc);
