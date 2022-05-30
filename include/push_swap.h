@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:28:03 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/10 17:02:21 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/25 14:32:12 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,20 @@ typedef struct s_vars {
 typedef struct s_node
 {
 	int				content;
+	int				pos_org;
+	int				bubble_index;
 	struct s_node	*next;
 }	t_node;
 
+// create list
 t_node	*create_list(int argc, char *argv[]);
 t_node	*lstnew(int number);
-void	lstadd_back(t_node **lst, int number);
+
+//
+void	list_print(t_node *stack, int argc);
+int		list_size(t_node *list);
+void	duplicate(char *argv[], int argc);
+void	only_numbers(char *argv[], int argc);
 
 // operations
 void	swap_a(t_node **stack_a, t_vars *vars);
@@ -49,12 +57,10 @@ void	reverse_a(t_node **stack_a, t_vars *vars);
 void	reverse_b(t_node **stack_b, t_vars *vars);
 void	reverse_both(t_node **stack_a, t_node **stack_b, t_vars *vars);
 
-//
-void	list_print(t_node *stack_a);
-int		list_size(t_node *list);
-
-//
-void	bubble_sort(t_node **stack_a, t_vars *vars);
+//index
+void	original_position(t_node *stack_a, int argc);
+void	bubble_index(t_node **stack_a, t_vars *vars, int argc);
+void	bubble_org_pos(t_node **stack_a, t_vars *vars);
 
 //
 int		is_sorted(t_node **stack_a);
@@ -66,7 +72,11 @@ void	arg_2(t_node **stack_a, t_vars *vars);
 void	arg_3(t_node **stack_a, t_vars *vars);
 void	arg_4(t_node **stack_a, t_node **stack_b, t_vars *vars);
 void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars);
-void	arg_5_2(t_node **stack_a, t_node **stack_b, t_vars *vars);
+
+void	sort_stack(t_node **stack_a, t_node **stack_b, t_vars *vars);
+void	radix_stack(t_node **stack_a, t_node **stack_b, \
+		t_vars *vars, int max_bits);
 
 int		smallest_num(t_node **stack_a);
+
 #endif

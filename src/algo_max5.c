@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/07 12:58:14 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/10 14:42:28 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/25 14:06:35 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,16 @@ void	arg_4(t_node **stack_a, t_node **stack_b, t_vars *vars)
 	}
 }
 
+static void	arg_5_2(t_node **stack_a, t_node **stack_b, t_vars *vars)
+{
+	if (is_sorted(stack_a) != 0)
+	{
+		push_to_b(stack_a, stack_b, vars);
+		arg_4(stack_a, stack_b, vars);
+		push_to_a(stack_b, stack_a, vars);
+	}
+}
+
 void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars)
 {
 	int	pos;
@@ -89,9 +99,8 @@ void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars)
 		swap_a(stack_a, vars);
 	else if (pos == 3)
 	{
-		reverse_a(stack_a, vars);
-		reverse_a(stack_a, vars);
-		reverse_a(stack_a, vars);
+		rotate_a(stack_a, vars);
+		rotate_a(stack_a, vars);
 	}
 	else if (pos == 4)
 	{
@@ -103,14 +112,4 @@ void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars)
 		reverse_a(stack_a, vars);
 	}
 	arg_5_2(stack_a, stack_b, vars);
-}
-
-void	arg_5_2(t_node **stack_a, t_node **stack_b, t_vars *vars)
-{
-	if (is_sorted(stack_a) != 0)
-	{
-		push_to_b(stack_a, stack_b, vars);
-		arg_4(stack_a, stack_b, vars);
-		push_to_a(stack_b, stack_a, vars);
-	}
 }

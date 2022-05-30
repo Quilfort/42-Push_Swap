@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/07 10:49:12 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/07 16:16:19 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/25 14:10:29 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,3 @@ void	rotate_both(t_node **stack_a, t_node **stack_b, t_vars *vars)
 	rotate_b(stack_b, vars);
 	write(1, "rr\n", 3);
 }
-
-// void	rotate(t_node **stack)
-// {
-// 	struct s_node	*temp;
-// 	int				number;
-
-// 	if (stack == NULL || *stack == NULL)
-// 		return ;
-// 	number = (*stack)->content;
-// 	temp = *stack;
-// 	*stack = (*stack)->next;
-// 	free(temp);
-// 	lstadd_back(stack, number);
-// }

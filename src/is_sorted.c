@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/10 13:03:06 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/10 14:45:09 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/25 14:11:14 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,7 @@ int	smallest_num(t_node **stack_a)
 	while (temp_small != NULL)
 	{
 		if (small > temp_small->content)
-		{
 			small = temp_small->content;
-		}
 		temp_small = temp_small->next;
 	}
 	pos = 1;

@@ -6,13 +6,13 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 12:08:58 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/05 09:39:36 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/25 14:12:54 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*create_head(char *argv[])
+static t_node	*create_head(char *argv[])
 {
 	t_node	*head;
 
@@ -47,7 +47,7 @@ t_node	*lstnew(int number)
 	return (newcontent);
 }
 
-void	lstadd_back(t_node **lst, int number)
+static void	lstadd_back(t_node **lst, int number)
 {
 	t_node	*temp;
 	t_node	*new;
