@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:28:03 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 13:22:22 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 15:14:50 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ typedef struct s_node
 
 // create list
 t_node	*create_list(int argc, char *argv[]);
-t_node	*lstnew(int number);
 
-//
-void	list_print(t_node *stack, int argc);
+// list utilities
 int		list_size(t_node *list);
 void	duplicate(char *argv[], int argc);
 void	only_numbers(char *argv[], int argc);
@@ -58,26 +56,25 @@ void	reverse_a(t_node **stack_a, t_vars *vars);
 void	reverse_b(t_node **stack_b, t_vars *vars);
 void	reverse_both(t_node **stack_a, t_node **stack_b, t_vars *vars);
 
-//index
+// index
 void	original_position(t_node *stack_a, int argc);
 void	bubble_index(t_node **stack_a, t_vars *vars, int argc);
 void	bubble_org_pos(t_node **stack_a, t_vars *vars);
 
-//
+// check my list
 int		is_sorted(t_node **stack_a);
 int		check_nodes(t_node *first, t_node *second);
 int		smallest_num(t_node **stack_a);
 
-// algo test
+// algo 5 or less
 void	arg_2(t_node **stack_a, t_vars *vars);
 void	arg_3(t_node **stack_a, t_vars *vars);
 void	arg_4(t_node **stack_a, t_node **stack_b, t_vars *vars);
 void	arg_5(t_node **stack_a, t_node **stack_b, t_vars *vars);
 
+// algo 6 or more
 void	sort_stack(t_node **stack_a, t_node **stack_b, t_vars *vars);
 void	radix_stack(t_node **stack_a, t_node **stack_b, \
 		t_vars *vars, int max_bits);
-
-int		smallest_num(t_node **stack_a);
 
 #endif

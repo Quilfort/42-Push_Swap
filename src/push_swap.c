@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:26:51 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 14:55:05 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 15:04:40 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,10 @@ int	main(int argc, char *argv[])
 	t_vars	vars;
 
 	if (argc < 3)
-		exit(0);
+		return (0);
 	duplicate(argv, argc);
 	only_numbers(argv, argc);
 	min_max(argv);
-	stack_b = NULL;
 	vars.arguments = argc - 1;
 	vars.check_print = 0;
 	stack_a = create_list(argc, argv);

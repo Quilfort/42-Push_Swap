@@ -6,23 +6,11 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 12:08:58 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/25 14:12:54 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 15:16:01 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static t_node	*create_head(char *argv[])
-{
-	t_node	*head;
-
-	head = (t_node *)malloc(sizeof(t_node));
-	if (head == NULL)
-		return (head);
-	head->content = ft_atoi(argv[1]);
-	head->next = NULL;
-	return (head);
-}
 
 t_node	*lstlast(t_node *lst)
 {
@@ -35,7 +23,7 @@ t_node	*lstlast(t_node *lst)
 	return (lst);
 }
 
-t_node	*lstnew(int number)
+static t_node	*lstnew(int number)
 {
 	t_node	*newcontent;
 
@@ -63,6 +51,18 @@ static void	lstadd_back(t_node **lst, int number)
 		temp = lstlast(*lst);
 		temp->next = new;
 	}
+}
+
+static t_node	*create_head(char *argv[])
+{
+	t_node	*head;
+
+	head = (t_node *)malloc(sizeof(t_node));
+	if (head == NULL)
+		return (head);
+	head->content = ft_atoi(argv[1]);
+	head->next = NULL;
+	return (head);
 }
 
 t_node	*create_list(int argc, char *argv[])
