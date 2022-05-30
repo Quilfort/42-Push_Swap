@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: qfrederi <qfrederi@student.codam.nl>         +#+                     */
+/*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 16:43:35 by qfrederi      #+#    #+#                 */
-/*   Updated: 2021/12/13 16:43:40 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 13:13:40 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 
 int		ft_atoi(const char *str);
+long	ft_atoi_long(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);

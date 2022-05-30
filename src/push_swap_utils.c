@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/14 12:40:22 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/25 14:37:34 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 14:55:41 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	duplicate(char *argv[], int argc)
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 			{
-				ft_putstr_fd("Error: Duplicate\n", 1);
-				exit(0);
+				ft_putstr_fd("Error\n", 2);
+				exit(1);
 			}
 			j++;
 		}
@@ -49,8 +49,8 @@ void	only_numbers(char *argv[], int argc)
 		{
 			if ((argv[i][j] < '0') || (argv[i][j] > '9'))
 			{
-				ft_putstr_fd("Error: Not A Number\n", 1);
-				exit(0);
+				ft_putstr_fd("Error\n", 2);
+				exit(1);
 			}
 			j++;
 		}
@@ -58,24 +58,20 @@ void	only_numbers(char *argv[], int argc)
 	}
 }
 
-void	list_print(t_node *stack, int argc)
+void	min_max(char *argv[])
 {
-	if (argc > 6)
+	int	i;
+
+	i = 0;
+	while (argv[i] != '\0')
 	{
-		while (stack)
+		if (ft_atoi_long(argv[i]) > (long)INT_MAX || \
+		ft_atoi_long(argv[i]) < (long)INT_MIN)
 		{
-			printf("Note: %d Orginal Position: %d Index: %d \n", stack->content, \
-			stack->pos_org, stack->bubble_index);
-			stack = stack->next;
+			ft_putstr_fd("Error\n", 2);
+			exit(1);
 		}
-	}
-	else
-	{
-		while (stack)
-		{
-			printf("%d ", stack->content);
-			stack = stack->next;
-		}
+		i++;
 	}
 }
 

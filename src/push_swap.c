@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:26:51 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/30 12:39:03 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 14:55:05 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int	main(int argc, char *argv[])
 		exit(0);
 	duplicate(argv, argc);
 	only_numbers(argv, argc);
+	min_max(argv);
 	stack_b = NULL;
 	vars.arguments = argc - 1;
 	vars.check_print = 0;
@@ -55,6 +56,5 @@ int	main(int argc, char *argv[])
 		else
 			more_than_5(&stack_a, &stack_b, &vars, argc);
 	}
-	// list_print(stack_a, argc);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/13 10:28:03 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/25 14:32:12 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 13:22:22 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	list_print(t_node *stack, int argc);
 int		list_size(t_node *list);
 void	duplicate(char *argv[], int argc);
 void	only_numbers(char *argv[], int argc);
+void	min_max(char *argv[]);
 
 // operations
 void	swap_a(t_node **stack_a, t_vars *vars);

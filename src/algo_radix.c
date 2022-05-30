@@ -6,7 +6,7 @@
 /*   By: qfrederi <qfrederi@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/25 14:16:07 by qfrederi      #+#    #+#                 */
-/*   Updated: 2022/05/25 15:40:45 by qfrederi      ########   odam.nl         */
+/*   Updated: 2022/05/30 14:53:08 by qfrederi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	radix_stack(t_node **stack_a, t_node **stack_b, \
 			j++;
 		}
 		while (*stack_b != NULL)
-			push_to_b(stack_b, stack_a, vars);
+			push_to_a(stack_b, stack_a, vars);
 		i++;
 	}
 }
